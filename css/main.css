@@ -14,12 +14,14 @@
     --color-text: #4f4f4f;
     --color-text-out: #90908e;
     --color-primary: #ffbf00;
+    --color-primary-100: #fece3f;
     --color-secondary: #fff2cc;
     --color-white: #fff;
     --color-red: #e74c3c;
     --color-green: #2ecc71;
     --color-red: #2ecc71;
     --color-separate: #ccc;
+    --box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, .1);
 }
 
 html,
@@ -33,6 +35,15 @@ b {
     font-family: 'PoppinsMedium', 'Rubik', sans-serif;
 }
 
+.color-primary {
+    color: var(--color-primary) !important;
+}
+
+/* Navbar */
+a.navbar-brand {
+    margin-left: -25px;
+}
+
 .nav-link {
     color: var(--color-black);
     padding: 0 35px !important;
@@ -44,5 +55,129 @@ b {
     border-radius: 20px;
     padding: 15px 25px;
     font-size: 20px;
-    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, .1);
+    box-shadow: var(--box-shadow) !important;
+
+    transition: ease-in-out all .3s;
+}
+
+.btn-white:hover {
+    color: var(--color-white) !important;
+    background-color: var(--color-primary);
+}
+
+.btn-icon {
+    padding-right: 75px;
+}
+
+.btn-icon .icon {
+    color: var(--color-black);
+    display: inline-block;
+    background-color: var(--color-primary);
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    right: 10px;
+    margin-top: -8px;
+    border-radius: 15px;
+    text-align: center;
+    padding-top: 6px;
+}
+
+/* Banner */
+.banner {
+    padding: 110px 0 200px
+}
+
+.banner .text-banner {
+    margin-bottom: 60px;
+    user-select: none;
+}
+
+.banner .text-banner h1 {
+    color: var(--color-black);
+    font-size: 60px;
+}
+
+.banner .text-banner p {
+    margin: 15px 0;
+    font-size: 20px;
+}
+
+.banner .btn-yellow {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 20px;
+    padding: 15px 25px;
+    font-size: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+.banner .btn-icon-left {
+    padding-left: 70px;
+}
+
+.banner .btn-icon-left span.icon-left {
+    display: inline-block;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    margin-left: -60px;
+    margin-top: -8px;
+    border-radius: 15px;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.btn-sm {
+    padding: 9px 15px !important;
+    border-radius: 15px !important;
+    font-size: 18px !important;
+}
+
+.btn-social {
+    width: 50px;
+}
+
+
+.card-banner {
+    height: 450px;
+    width: 450px;
+    border-radius: 170px;
+    background-color: var(--color-primary-100);
+    position: absolute;
+    right: 0;
+    top: -80px;
+}
+
+.banner .img-banner {
+    position: absolute;
+    width: 570px;
+    top: 30px;
+    right: 15px;
+}
+
+.banner .card {
+    border-radius: 20px;
+    padding: 15px 20px;
+    font-size: 20px;
+    border: none;
+    box-shadow: var(--box-shadow);
+}
+
+.banner .card-case {
+    width: 350px;
+    font-size: 14px;
+    position: absolute;
+    right: 0;
+    bottom: -75px;
+}
+
+.banner .card-case-name {
+    position: absolute;
+    font-size: 12px;
+    color: var(--color-primary);
+    right: 20px;
+    bottom: 10px;
 }
