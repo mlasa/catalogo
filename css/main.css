@@ -83,6 +83,19 @@ a.navbar-brand {
     padding-top: 6px;
 }
 
+.main-title {
+    color: var(--color-primary);
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 5px;
+}
+
+.subtitle {
+    color: var(--color-black);
+    font-size: 40px;
+    margin: 5px 0 30px;
+}
+
 /* Banner */
 .banner {
     padding: 110px 0 200px
@@ -180,4 +193,42 @@ a.navbar-brand {
     color: var(--color-primary);
     right: 20px;
     bottom: 10px;
+}
+
+/* Serviços */
+.servicos {
+    padding: 100px 0 150px;
+}
+
+.servicos .background-servicos {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 500px;
+    background-image: url(../img/bg-icons-2.png);
+}
+
+.servicos .card-icon {
+    padding-bottom: 5px;
+    height: 140px;
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.servicos .card-icon img {
+    max-height: 100%;
+}
+
+.servicos .card-text {
+    color: var(--color-text-out);
+    font-size: 15px;
+    padding: 0 30px;
+}
+
+.servicos .card-text p {
+    font-size: 22px;
+    color: var(--color-black);
+    margin-bottom: 10px;
 }
