@@ -11,6 +11,7 @@
 :root {
     --color-background: #fffdf7;
     --color-black: #212121;
+    --color-black-heavy: #000;
     --color-text: #4f4f4f;
     --color-text-out: #90908e;
     --color-primary: #ffbf00;
@@ -65,6 +66,11 @@ a.navbar-brand {
     background-color: var(--color-primary);
 }
 
+.btn-white.active {
+    color: var(--color-black) !important;
+    background-color: var(--color-primary) !important;
+}
+
 .btn-icon {
     padding-right: 75px;
 }
@@ -94,6 +100,14 @@ a.navbar-brand {
     color: var(--color-black);
     font-size: 40px;
     margin: 5px 0 30px;
+}
+
+.card {
+    border-radius: 20px;
+    padding: 15px 20px;
+    font-size: 20px;
+    border: none;
+    box-shadow: var(--box-shadow);
 }
 
 /* Banner */
@@ -171,14 +185,6 @@ a.navbar-brand {
     right: 15px;
 }
 
-.banner .card {
-    border-radius: 20px;
-    padding: 15px 20px;
-    font-size: 20px;
-    border: none;
-    box-shadow: var(--box-shadow);
-}
-
 .banner .card-case {
     width: 350px;
     font-size: 14px;
@@ -197,7 +203,7 @@ a.navbar-brand {
 
 /* Serviços */
 .servicos {
-    padding: 100px 0 150px;
+    padding: 50px 0 150px;
 }
 
 .servicos .background-servicos {
@@ -231,4 +237,103 @@ a.navbar-brand {
     font-size: 22px;
     color: var(--color-black);
     margin-bottom: 10px;
+}
+
+/* Cardapio */
+
+.cardapio {
+    padding: 50px 0 150px;
+}
+
+.cardapio .background-cardapio {
+    background: url(../img/bg-icons-1.png);
+    left: 0;
+    right: 0;
+}
+
+.cardapio .container-menu {
+    margin-bottom: 40px;
+}
+
+.cardapio .card-item {
+    height: 360px;
+    margin-bottom: 15px;
+}
+
+.cardapio .card-item img {
+    width: 100%;
+    border-radius: 11px;
+}
+
+.cardapio .card-item .title-product {
+    color: var(--color-black);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 40px;
+    margin-bottom: 0;
+}
+
+.cardapio .card-item .price-product {
+    color: var(--color-primary);
+    font-size: 24px;
+}
+
+.cardapio .card-item .add-cart {
+    display: none;
+    text-align: center;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardapio .card-item .btn-sub {
+    color: var(--color-black-heavy);
+    padding: 5px 7px;
+    border: 2px solid var(--color-black-heavy);
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+}
+
+.cardapio .card-item .btn-add {
+    color: var(--color-black-heavy);
+    padding: 5px 7px;
+    border: 2px solid var(--color-black-heavy);
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+}
+
+.cardapio .card-item .number-items {
+    color: var(--color-black-heavy);
+    padding: 6px 15px;
+    border-top: 2px solid var(--color-black-heavy);
+    border-bottom: 2px solid var(--color-black-heavy);
+    font-size: 18px;
+}
+
+.cardapio .card-item .btn-add-cart {
+    border: 2px solid var(--color-black-heavy);
+    font-size: 16px;
+    padding: 4px 10px;
+    border-radius: 10px;
+    color: var(--color-white);
+    background-color: var(--color-black-heavy);
+    margin-left: 15px;
+}
+
+.cardapio .card-item:hover {
+    background-color: var(--color-primary);
+}
+
+.cardapio .card-item:hover .title-product {
+    display: none;
+}
+
+.cardapio .card-item:hover .add-cart {
+    display: flex;
+}
+
+.cardapio .card-item:hover .price-product {
+    color: var(--color-black-heavy);
+    margin-top: 20px;
 }
