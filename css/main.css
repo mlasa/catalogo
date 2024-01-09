@@ -167,7 +167,6 @@ a.navbar-brand {
     width: 50px;
 }
 
-
 .card-banner {
     height: 450px;
     width: 450px;
@@ -178,12 +177,18 @@ a.navbar-brand {
     top: -80px;
 }
 
-.banner .img-banner {
+.img-banner {
     position: absolute;
     width: 570px;
     top: 30px;
     right: 15px;
+    z-index: 2;
 }
+
+.hidden {
+    display: none !important;
+}
+
 
 .banner .card-case {
     width: 350px;
@@ -336,4 +341,100 @@ a.navbar-brand {
 .cardapio .card-item:hover .price-product {
     color: var(--color-black-heavy);
     margin-top: 20px;
+}
+
+.depoimentos {
+    padding: 50px 0 150px;
+}
+
+.depoimentos .background-depoimentos {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 500px;
+    background: url(../img/bg-icons-1.png);
+}
+
+
+.depoimentos .card-depoimentos {
+    height: 390px;
+    width: 390px;
+    border-radius: 120px;
+    background-color: var(--color-secondary);
+    position: absolute;
+    left: 0;
+}
+
+.depoimentos .card-depoimentos img {
+    z-index: 40 !important;
+}
+
+.depoimentos .container-dados-depoimento {
+    display: flex;
+}
+
+.depoimentos .depoimento {
+    margin-top: 70px;
+}
+
+.depoimentos .imagem-depoimento {
+    height: 65px;
+    width: 65px;
+    background-color: var(--color-white);
+    border-radius: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 15px;
+}
+
+.depoimentos #depoimento-1 .imagem-depoimento {
+    background-image: url(../img/diego.jpg);
+    background-size: cover;
+}
+
+.depoimentos #depoimento-2 .imagem-depoimento {
+    background-image: url(../img/ana.jpg);
+    background-size: cover;
+}
+
+.depoimentos #depoimento-3 .imagem-depoimento {
+    background-image: url(../img/joao.jpg);
+    background-size: cover;
+}
+
+.depoimentos .nome-depoimento {
+    color: var(--color-black);
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.depoimentos .nota-depoimento {
+    color: var(--color-primary);
+}
+
+.depoimentos .nota-depoimento span {
+    color: var(--color-black);
+}
+
+.depoimentos .texto-depoimento {
+    color: var(--color-black);
+    font-size: 16px;
+    display: flex;
+}
+
+.depoimentos .texto-depoimento i {
+    font-size: 35px;
+    color: var(--color-primary);
+}
+
+.depoimentos .texto-depoimento i:first-child {
+    padding-left: 10px;
+    padding-right: 35px;
+}
+
+.depoimentos .texto-depoimento i:last-child {
+    padding-left: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
 }
