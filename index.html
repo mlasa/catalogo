@@ -452,7 +452,7 @@
                     </div>
                 </div>
                 <!--Endereço de entrega-->
-                <div  id="addressDeliver" class="mr-0 ml-0">
+                <div  id="addressDeliver" class="mr-0 ml-0 hidden">
                     <div class="row">
                         <div class="col-4">
                             <div class="form-group container-cep">
@@ -533,7 +533,59 @@
                     </div>
                 </div>
                 <!--Resumo das informações do pedido-->
-                <div  id="resumeCarrinho" class="row mr-0 ml-0 hidden"></div>
+                <div  id="resumeCart" class="row mr-0 ml-0">
+                    <div class="col-12 px-0">
+                        <p class="title-cart mt-4"><b>Itens do pedido:</b></p>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="row" id="listItemsResume">
+                            <div class="col-12 item-cart resume">
+                                <div class="img-product-resume">
+                                    <img src="./img/cardapio/bebidas/hong-kong-boba-tea-kit-for-6.63841de36d8e5edfafa13023fc303285.jpg" alt="">
+                                </div>
+                                <div class="data-product">
+                                    <p class="title-product-resume"><b>Nome do produto</b></p>
+                                    <p class="price-product-resume"><b>R$ 50,00</b></p>
+                                </div>
+                                <p class="quantity-product-resume">
+                                    x <b>1</b>
+                                </p>
+                            </div>
+        
+                            <div class="col-12 item-cart resume">
+                                <div class="img-product-resume">
+                                    <img src="./img/cardapio/bebidas/hong-kong-boba-tea-kit-for-6.63841de36d8e5edfafa13023fc303285.jpg" alt="">
+                                </div>
+                                <div class="data-product">
+                                    <p class="title-product-resume"><b>Nome do produto</b></p>
+                                    <p class="price-product-resume"><b>R$ 50,00</b></p>
+                                </div>
+                                <p class="quantity-products-resume">
+                                    x <b>1</b>
+                                </p>
+                            </div>
+
+                        </div>                        
+                    </div>
+
+                    <div class="col-12 px-0">
+                        <p class="title-cart mt-4"><b>Local de entrega:</b></p>
+                    </div>
+
+                    <div class="col-12 item-cart resume d-flex justify-content-start">
+                        <div class="img-map"><i class="fas fa-map-marked-alt"></i></div>
+
+                        <div class="data-products">
+                            <p class="text-address-resume" id="address-resume">
+                                <b id="address-resume">Rua teste, Lorem Ipsum,10</b>
+                            </p>
+                            <p class="text-city-resume" id="city-resume">Lorem Ipsum</p>
+                        </div>
+
+                    </div>
+
+                </div>
             </div>
         </div>
         <div class="m-footer">

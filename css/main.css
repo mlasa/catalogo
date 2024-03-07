@@ -657,4 +657,47 @@ select.form-control{
     right: 25px;
     top: 38px;
 }
-
+.item-cart.resume{
+    padding: 10px 0;
+}
+.img-product-resume img{
+    width: 50px;
+    border-radius: 11px;
+}
+.title-product-resume{
+    color: var(--color-black);
+    font-size: 18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+.price-product-resume{
+    color: var(--color-primary);
+    font-size: 16px;
+    margin-bottom: 0;
+}
+.quantity-product-resume{
+    color: var(--color-black);
+    font-size: 20px;
+    margin-bottom: 0;
+}
+.img-map{
+    height: 50px;
+    width: 50px;
+    background-color: var(--color-secondary);
+    color: var(--color-black);
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 11px;
+    margin-right: 20px;
+}
+.text-address-resume{
+    color: var(--color-black);
+    margin-bottom: 0;
+}
+.text-city-resume{
+    margin-bottom: 0;
+}
