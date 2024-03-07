@@ -500,3 +500,59 @@ footer {
 .container-redes-footer {
     justify-content: end;
 }
+
+.modal-full{
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 50px;
+    background-color: var(--color-white);
+    z-index: 9990;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-full .m-header{
+    padding-bottom: 20px;
+}
+.modal-full .m-body{
+    flex: 1;
+    overflow: auto;
+    overflow-x: hidden;
+}
+.modal-full .etapas{
+    display: flex;
+}
+.modal-full .etapa{
+    width: 35px;
+    height: 35px;
+    background-color: var(--color-white);
+    border-radius: 50px;
+    box-shadow: var(--box-shadow);
+    color: var(--color-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.modal-full .etapa:not(:last-of-type):before{
+    content: '';
+    width: 20px;
+    background-color: var(--color-separate);
+    position: absolute;
+    height: 2px;
+    margin-left: 55px;
+}
+
+.modal-full .etapa.active,.modal-full .etapa.active:before {
+    background-color: var(--color-primary);
+}
+.modal-full .title-carrinho{
+    font-size: 20px;
+    color: var(--color-black);
+}
