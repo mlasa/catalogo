@@ -151,108 +151,28 @@
                     </div>
 
                     <div class="col-lg-12 container-menu">
-                        <a class="btn btn-white btn-sm mr-3 active">
+                        <a class="btn btn-white btn-sm mr-3 active" onclick="menu.methods.changeFilterMenu(`burgers`)">
                             <i class="fas fa-hamburger"></i> &nbsp; Hamburguer
                         </a>
-                        <a class="btn btn-white btn-sm mr-3">
+                        <a class="btn btn-white btn-sm mr-3" onclick="menu.methods.changeFilterMenu(`pizzas`)">
                             <i class="fas fa-pizza-slice"></i> &nbsp; Pizza
                         </a>
-                        <a class="btn btn-white btn-sm mr-3">
+                        <a class="btn btn-white btn-sm mr-3" onclick="menu.methods.changeFilterMenu(`churrasco`)">
                             <i class="fas fa-drumstick-bite"></i> &nbsp; Carnes
                         </a>
-                        <a class="btn btn-white btn-sm mr-3">
+                        <a class="btn btn-white btn-sm mr-3" onclick="menu.methods.changeFilterMenu(`steaks`)">
                             <i class="fas fa-bacon"></i> &nbsp; Steaks
                         </a>
-                        <a class="btn btn-white btn-sm mr-3">
+                        <a class="btn btn-white btn-sm mr-3" onclick="menu.methods.changeFilterMenu(`bebidas`)">
                             <i class="fas fa-cocktail"></i> &nbsp; Bebidas
                         </a>
-                        <a class="btn btn-white btn-sm mr-3">
+                        <a class="btn btn-white btn-sm mr-3" onclick="menu.methods.changeFilterMenu(`sobremesas`)">
                             <i class="fas fa-ice-cream"></i> &nbsp; Sobremesas
                         </a>
                     </div>
 
                     <div class="col-lg-12">
-                        <div class="row" id="items-cardapio">
-                            <div class="col-lg-3">
-                                <div class="card card-item">
-                                    <div class="img-produto">
-                                        <img src="./img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg"
-                                            alt="">
-                                    </div>
-                                    <p class="title-product text-center mt-3"><b>Produto com nome muito grande</b></p>
-                                    <p class="price-product text-center mt-4"><b>R$ 30,00</b></p>
-                                    <div class="add-cart">
-                                        <span class="btn-sub"><i class="fas fa-minus"></i></span>
-                                        <span class="number-items">0</span>
-                                        <span class="btn-add"><i class="fas fa-plus"></i></span>
-                                        <span class="btn btn-add-cart"><i class="fas fa-shopping-bag"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="card card-item">
-                                    <div class="img-produto">
-                                        <img src="./img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg"
-                                            alt="">
-                                    </div>
-                                    <p class="title-product text-center mt-3"><b>Produto com nome muito grande</b></p>
-                                    <p class="price-product text-center mt-4"><b>R$ 30,00</b></p>
-                                    <div class="add-cart">
-                                        <span class="btn-sub"><i class="fas fa-minus"></i></span>
-                                        <span class="number-items">0</span>
-                                        <span class="btn-add"><i class="fas fa-plus"></i></span>
-                                        <span class="btn btn-add-cart"><i class="fas fa-shopping-bag"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="card card-item">
-                                    <div class="img-produto">
-                                        <img src="./img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg"
-                                            alt="">
-                                    </div>
-                                    <p class="title-product text-center mt-3"><b>Produto com nome muito grande</b></p>
-                                    <p class="price-product text-center mt-4"><b>R$ 30,00</b></p>
-                                    <div class="add-cart">
-                                        <span class="btn-sub"><i class="fas fa-minus"></i></span>
-                                        <span class="number-items">0</span>
-                                        <span class="btn-add"><i class="fas fa-plus"></i></span>
-                                        <span class="btn btn-add-cart"><i class="fas fa-shopping-bag"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="card card-item">
-                                    <div class="img-produto">
-                                        <img src="./img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg"
-                                            alt="">
-                                    </div>
-                                    <p class="title-product text-center mt-3"><b>Produto com nome muito grande</b></p>
-                                    <p class="price-product text-center mt-4"><b>R$ 30,00</b></p>
-                                    <div class="add-cart">
-                                        <span class="btn-sub"><i class="fas fa-minus"></i></span>
-                                        <span class="number-items">0</span>
-                                        <span class="btn-add"><i class="fas fa-plus"></i></span>
-                                        <span class="btn btn-add-cart"><i class="fas fa-shopping-bag"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="card card-item">
-                                    <div class="img-produto">
-                                        <img src="./img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg"
-                                            alt="">
-                                    </div>
-                                    <p class="title-product text-center mt-3"><b>Produto com nome muito grande</b></p>
-                                    <p class="price-product text-center mt-4"><b>R$ 30,00</b></p>
-                                    <div class="add-cart">
-                                        <span class="btn-sub"><i class="fas fa-minus"></i></span>
-                                        <span class="number-items">0</span>
-                                        <span class="btn-add"><i class="fas fa-plus"></i></span>
-                                        <span class="btn btn-add-cart"><i class="fas fa-shopping-bag"></i></span>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="row" id="items-menu">
                         </div>
                     </div>
 
@@ -617,7 +537,8 @@
     <script type="text/javascript" src="./js/modernizr-3.5.0.min.js"></script>
     <script type="text/javascript" src="./js/popper.min.js"></script>
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="./js/dados.min.js"></script>
+    <script type="text/javascript" src="./js/dados.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
 </body>
 
 </html>

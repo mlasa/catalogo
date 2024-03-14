@@ -10,7 +10,7 @@ helloWorld();
 `;
 
 // Nome do arquivo onde o script será adicionado
-const fileName = 'meuScript.js';
+const fileName = 'dados.js';
 
 // Adicionando o script ao arquivo
 fs.appendFile(fileName, scriptCode, (err) => {
