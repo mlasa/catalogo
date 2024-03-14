@@ -1,6 +1,7 @@
 $(document).ready(function(){
     menu.events.init();
     menu.methods.getMenu();
+    menu.methods.setActiveFilter();
 });
 
 let menu = {};
@@ -14,7 +15,6 @@ menu.events = {
 menu.methods = {
     getMenu:() =>{
         let filter = MENU[filterMenu];
-        console.log(filter);
 
         $("#items-menu").empty();
         $.each(filter, (i, e)=>{
@@ -26,6 +26,12 @@ menu.methods = {
         filterMenu = filter;
         menu.methods.getMenu();
     },
+    setActiveFilter: ()=>{
+        $(".container-menu a.btn-white").on( "click", function() {
+            $(this).siblings().removeClass("active");
+            $(this).addClass("active");
+        });
+    }
 }
 menu.templates = {
     item : (imgPath, name, price) => `
