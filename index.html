@@ -151,22 +151,26 @@
                     </div>
 
                     <div class="col-lg-12 container-menu">
-                        <a class="btn btn-white btn-sm mr-3 active" onclick="menu.methods.changeFilterMenu(`burgers`)">
+                        <a id="menu-burgers" class="btn btn-white btn-sm mr-3 active"
+                            onclick="menu.methods.getMenu(`burgers`)">
                             <i class="fas fa-hamburger"></i> &nbsp; Hamburguer
                         </a>
-                        <a class="btn btn-white btn-sm mr-3" onclick="menu.methods.changeFilterMenu(`pizzas`)">
+                        <a id="menu-pizzas" class="btn btn-white btn-sm mr-3" onclick="menu.methods.getMenu(`pizzas`)">
                             <i class="fas fa-pizza-slice"></i> &nbsp; Pizza
                         </a>
-                        <a class="btn btn-white btn-sm mr-3" onclick="menu.methods.changeFilterMenu(`churrasco`)">
+                        <a id="menu-churrasco" class="btn btn-white btn-sm mr-3"
+                            onclick="menu.methods.getMenu(`churrasco`)">
                             <i class="fas fa-drumstick-bite"></i> &nbsp; Carnes
                         </a>
-                        <a class="btn btn-white btn-sm mr-3" onclick="menu.methods.changeFilterMenu(`steaks`)">
+                        <a id="menu-steaks" class="btn btn-white btn-sm mr-3" onclick="menu.methods.getMenu(`steaks`)">
                             <i class="fas fa-bacon"></i> &nbsp; Steaks
                         </a>
-                        <a class="btn btn-white btn-sm mr-3" onclick="menu.methods.changeFilterMenu(`bebidas`)">
+                        <a id="menu-bebidas" class="btn btn-white btn-sm mr-3"
+                            onclick="menu.methods.getMenu(`bebidas`)">
                             <i class="fas fa-cocktail"></i> &nbsp; Bebidas
                         </a>
-                        <a class="btn btn-white btn-sm mr-3" onclick="menu.methods.changeFilterMenu(`sobremesas`)">
+                        <a id="menu-sobremesas" class="btn btn-white btn-sm mr-3"
+                            onclick="menu.methods.getMenu(`sobremesas`)">
                             <i class="fas fa-ice-cream"></i> &nbsp; Sobremesas
                         </a>
                     </div>
@@ -177,7 +181,7 @@
                     </div>
 
                     <div class="col-lg-12 text-center">
-                        <a class="btn btn-sm btn-white">Ver mais</a>
+                        <a class="btn btn-sm btn-white" id="seemore" onclick="menu.methods.seeMore()">Ver mais</a>
                     </div>
 
                 </div>
@@ -335,7 +339,7 @@
             </div>
         </div>
     </footer>
-    
+
     <!--Modal carrinho-->
     <div class="modal-full hidden" id="modalCart">
         <div class="m-header">
@@ -357,7 +361,8 @@
                 <div id="itensCarrinho" class="row mr-0 ml-0 hidden">
                     <div class="col-12 item-cart">
                         <div class="img-product">
-                            <img src="./img/cardapio/bebidas/hong-kong-boba-tea-kit-for-6.63841de36d8e5edfafa13023fc303285.jpg" alt="">
+                            <img src="./img/cardapio/bebidas/hong-kong-boba-tea-kit-for-6.63841de36d8e5edfafa13023fc303285.jpg"
+                                alt="">
                         </div>
                         <div class="data-product">
                             <p class="title-product"><b>Nome do produto</b></p>
@@ -372,7 +377,7 @@
                     </div>
                 </div>
                 <!--Endereço de entrega-->
-                <div  id="addressDeliver" class="mr-0 ml-0 hidden">
+                <div id="addressDeliver" class="mr-0 ml-0 hidden">
                     <div class="row">
                         <div class="col-4">
                             <div class="form-group container-cep">
@@ -453,7 +458,7 @@
                     </div>
                 </div>
                 <!--Resumo das informações do pedido-->
-                <div  id="resumeCart" class="row mr-0 ml-0">
+                <div id="resumeCart" class="row mr-0 ml-0">
                     <div class="col-12 px-0">
                         <p class="title-cart mt-4"><b>Itens do pedido:</b></p>
                     </div>
@@ -462,7 +467,8 @@
                         <div class="row" id="listItemsResume">
                             <div class="col-12 item-cart resume">
                                 <div class="img-product-resume">
-                                    <img src="./img/cardapio/bebidas/hong-kong-boba-tea-kit-for-6.63841de36d8e5edfafa13023fc303285.jpg" alt="">
+                                    <img src="./img/cardapio/bebidas/hong-kong-boba-tea-kit-for-6.63841de36d8e5edfafa13023fc303285.jpg"
+                                        alt="">
                                 </div>
                                 <div class="data-product">
                                     <p class="title-product-resume"><b>Nome do produto</b></p>
@@ -472,10 +478,11 @@
                                     x <b>1</b>
                                 </p>
                             </div>
-        
+
                             <div class="col-12 item-cart resume">
                                 <div class="img-product-resume">
-                                    <img src="./img/cardapio/bebidas/hong-kong-boba-tea-kit-for-6.63841de36d8e5edfafa13023fc303285.jpg" alt="">
+                                    <img src="./img/cardapio/bebidas/hong-kong-boba-tea-kit-for-6.63841de36d8e5edfafa13023fc303285.jpg"
+                                        alt="">
                                 </div>
                                 <div class="data-product">
                                     <p class="title-product-resume"><b>Nome do produto</b></p>
@@ -486,7 +493,7 @@
                                 </p>
                             </div>
 
-                        </div>                        
+                        </div>
                     </div>
 
                     <div class="col-12 px-0">
