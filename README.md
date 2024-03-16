@@ -3,7 +3,8 @@ E outro ponto, é que eu uso JQuery no meu trabalho e eu pensei em dar uma aquec
 
 ## Enfrentando problemas de código
 
-### 1 - Não pude adicionar funcoes ao evento onclick dos elementos html do template
+### 1 - Precisei escutar evento onclick
+Não pude adicionar o evento onclick diretamente nos elementos html do template.
 Precisei usar o JQuery para escutar o evento de click.
 
 ### 2 - Sumiço de eventos

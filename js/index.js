@@ -2,19 +2,22 @@ $(document).ready(function () {
     menu.events.init();
 });
 
-let menu = {};
+const menu = {};
+const cart = [];
+
 menu.events = {
     init: () => {
         menu.methods.getMenu();
         menu.methods.setActiveFilter();
 
-        // Associando eventos de clique aos botões de adição e remoção
+        // Associando eventos de clique aos botões de adição e remoção e adicionar ao carrinho
         $("#items-menu").on("click", ".btn-sub", menu.methods.removeCart);
         $("#items-menu").on("click", ".btn-add", menu.methods.addCart);
+        $("#items-menu").on("click", ".btn-add-cart", menu.methods.sendToCart);
     }
 }
 menu.methods = {
-    getMenu: (filterMenu = "burgers", seeMore = false) => {
+    getMenu: function (filterMenu = "burgers", seeMore = false) {
         let filter = MENU[filterMenu];
 
         if (!seeMore) {
@@ -30,13 +33,13 @@ menu.methods = {
             }
         });
     },
-    setActiveFilter: () => {
+    setActiveFilter: function () {
         $(".container-menu a.btn-white").on("click", function () {
             $(this).siblings().removeClass("active");
             $(this).addClass("active");
         });
     },
-    seeMore: () => {
+    seeMore: function () {
         let active = $('.container-menu a.active').attr("id").split('-')[1];
         menu.methods.getMenu(active, true);
         $('#seemore').addClass("hidden");
@@ -52,6 +55,40 @@ menu.methods = {
         const quantity = $(this).siblings(".number-items");
         let currentQuantity = parseInt(quantity.text()) || 0;
         quantity.text(currentQuantity + 1);
+    },
+    sendToCart: function () {
+        const id = $(this).closest(".card-item").attr("id");
+        const quantity = $(this).siblings(".number-items");
+        const currentQuantity = parseInt(quantity.text()) || 0;
+        const activeCategory = $(".container-menu a.btn-white.active").attr("id").split('-')[1];
+
+        if (currentQuantity > 0) {
+            /*Javascript*/
+            //const itemSelected = MENU[activeCategory].find(item => item.id == id);
+
+            /*JQuery */
+            const itemSelected = $.grep(MENU[activeCategory], (element, index) => { return element.id == id })[0];
+            itemSelected.quantity = currentQuantity;
+
+            //Item já está no carrinho? Se sim, só aumentar a quantidade
+            const isAlreadyInCart = cart.find((e, index) => {
+                if (e.id == id) {
+                    e.indexInArray = index;
+                    return e;
+                }
+            });
+            if (isAlreadyInCart) {
+                cart[isAlreadyInCart.indexInArray].quantity += 1;
+                delete isAlreadyInCart.indexInArray;
+            }
+            else {
+                delete itemSelected.indexInArray;
+                cart.push(itemSelected);
+            }
+            // Zerar items selecionados
+            quantity.text(0);
+            console.log(cart);
+        }
     }
 }
 menu.templates = {
